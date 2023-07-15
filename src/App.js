@@ -12,7 +12,7 @@ function App() {
   
  return (
     <div className="App">
-      <BrowserRouter className="main-container">
+      <BrowserRouter>
         
         <Navbar/>
         <div className="content">
@@ -24,8 +24,6 @@ function App() {
             <Route path="/Candidates" element={<Candidates />} />
             <Route path="/Structure" element={<Structure />} />
             <Route path="/Settings" element={<Settings />} />
-
-            {/* Add more routes for other components */}
           </Routes>
         </div>
       </BrowserRouter>

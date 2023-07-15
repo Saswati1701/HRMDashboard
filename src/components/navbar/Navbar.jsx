@@ -5,13 +5,16 @@ import { FaCalendarAlt } from "react-icons/fa";
 import { PiHandbagSimpleFill } from "react-icons/pi";
 import { BsFillPeopleFill } from "react-icons/bs";
 import { MdAccountTree } from "react-icons/md";
-import { useNavigate, Link } from 'react-router-dom';
-
-
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 const Route = ({component: Icons,name }) =>{
+  const handleClick = () => {
+
+  }
+  
     return(
       <Link to={`/${name}`} style={{textDecoration:"none"}}>
-        <div className='eachRoute'>
+        <div className='eachRoute' onClick={handleClick}>
             <Icons color="#C4C4C4" />
             <span style={{color:"#C4C4C4", paddingLeft:"1rem"}}>{name}</span>
         </div>
@@ -22,12 +25,6 @@ const Route = ({component: Icons,name }) =>{
 
 
 const Navbar = () => {
-  // const navigate = useNavigate();
-  // const handleNavigate = () => {
-  //     navigate('/calendar');
-  // }
-  
-
   return (
     <div className='left-container'>
       <div className='navbar-container'>
