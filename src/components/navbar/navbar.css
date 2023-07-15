@@ -1,4 +1,34 @@
-.navbar{
-    height: 100%;
+.left-container{
+    height: 100vh;
+    width: 300px;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
+
+.navbar-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 40%;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    padding-left: 3rem;
+}
+
+.eachRoute{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
