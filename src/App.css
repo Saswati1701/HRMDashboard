@@ -3,3 +3,12 @@
     display: flex;
 }
 
+.content{
+    width: 929px;
+}
+
+.right-container{
+    width: 331.73px;
+    height: 100vh;
+    background-color: pink;
+}

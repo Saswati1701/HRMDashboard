@@ -26,6 +26,7 @@ function App() {
             <Route path="/Settings" element={<Settings />} />
           </Routes>
         </div>
+      <div className='right-container'> </div>
       </BrowserRouter>
     </div>
   );

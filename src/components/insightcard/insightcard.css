@@ -1,0 +1,31 @@
+.insightcard-component{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 267px;
+    height:122px ;
+    border: 1px solid black;
+
+}
+
+.insightcard-left-container{
+    width: 50%;
+    height: 100%;
+}
+.insightcard-right-container{
+    width: 50%;
+    height: 100%;
+
+}
+
+.icon-background{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #EAF6F4;
+    border-radius:50% ;
+    height: 20px;
+    width: 20px;
+}
