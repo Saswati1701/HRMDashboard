@@ -30,12 +30,12 @@ const data2 = [
 
 
 
-const Insightcard = ({text, number, iconColor, increase, image}) => {
+const Insightcard = ({text, number, iconColor, increase, image, color}) => {
   return (
     <div className='insightcard-component'>
             <div className='insightcard-left-container'>
                 <p style={{color:"#C4C4C4", margin:'0 0 0.3rem 0', fontSize:"14px"}}>{text}</p>
-                <h2 style={{margin:'0 0 0.3rem 0'}}>{number}</h2>
+                <h2 style={{ color:`${color}` ,margin:'0 0 0.3rem 0'}}>{number}</h2>
                 <p style={{margin:"0", display:"flex", alignItems:"center", fontSize:"13px"}}><span className='icon-background' style={{margin:"0 0.5rem 0 0"}} ><AiOutlineRise color={iconColor}/></span>{increase}</p>
             </div>
             <div className='insightcard-right-container'>

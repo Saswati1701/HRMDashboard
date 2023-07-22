@@ -24,7 +24,7 @@ const Route = ({component: Icons,name, selected=false, onClick }) =>{
 
 
 const Navbar = () => {
-  const [select, setSelect] = useState("Dashboard")
+  const [select, setSelect] = useState(window.location.pathname.slice(1))
 
   const handleNavClick = (name) => {
     setSelect(name)
@@ -32,15 +32,13 @@ const Navbar = () => {
   
   return (
     <div className='left-container'>
-      <div className='navbar-container'>
-        <div className='navbar'>
-          <Route component={IoGrid} onClick={() => { handleNavClick("Dashboard") }} selected={ select === "Dashboard" ? true : false } name="Dashboard"/>
-          <Route component={FaCalendarAlt} onClick={() => { handleNavClick("Calendar") }} selected={ select === "Calendar" ? true : false } name="Calendar"/>
-          <Route component={PiHandbagSimpleFill} onClick={() => { handleNavClick("Jobs") }} selected={ select === "Jobs" ? true : false } name="Jobs" />
-          <Route component={BsFillPeopleFill} onClick={() => { handleNavClick("Candidates") }} selected={ select === "Candidates" ? true : false } name="Candidates"/>
-          <Route component={MdAccountTree} onClick={() => { handleNavClick("Structure") }} selected={ select === "Structure" ? true : false } name="Structure"/>
-          <Route component={IoSettings} onClick={() => { handleNavClick("Settings") }} selected={ select === "Settings" ? true : false } name="Settings"/>
-        </div>
+      <div className='navbar'>
+        <Route component={IoGrid} onClick={() => { handleNavClick("Dashboard") }} selected={ select === "Dashboard" ? true : false } name="Dashboard"/>
+        <Route component={FaCalendarAlt} onClick={() => { handleNavClick("Calendar") }} selected={ select === "Calendar" ? true : false } name="Calendar"/>
+        <Route component={PiHandbagSimpleFill} onClick={() => { handleNavClick("Jobs") }} selected={ select === "Jobs" ? true : false } name="Jobs" />
+        <Route component={BsFillPeopleFill} onClick={() => { handleNavClick("Candidates") }} selected={ select === "Candidates" ? true : false } name="Candidates"/>
+        <Route component={MdAccountTree} onClick={() => { handleNavClick("Structure") }} selected={ select === "Structure" ? true : false } name="Structure"/>
+        <Route component={IoSettings} onClick={() => { handleNavClick("Settings") }} selected={ select === "Settings" ? true : false } name="Settings"/>
       </div>
     </div>
   )

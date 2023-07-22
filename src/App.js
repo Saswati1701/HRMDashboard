@@ -12,20 +12,17 @@ function App() {
   
  return (
     <div className="App">
-      <BrowserRouter>
-        
+      <BrowserRouter> 
         <Navbar/>
-        <div className="content">
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/Dashboard" element={<Dashboard />} />
-            <Route path="/Calendar" element={<Calendar/>} />
-            <Route path="/Jobs" element={<Jobs/>} />
-            <Route path="/Candidates" element={<Candidates />} />
-            <Route path="/Structure" element={<Structure />} />
-            <Route path="/Settings" element={<Settings />} />
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/Dashboard" element={<Dashboard />} />
+          <Route path="/Calendar" element={<Calendar/>} />
+          <Route path="/Jobs" element={<Jobs/>} />
+          <Route path="/Candidates" element={<Candidates />} />
+          <Route path="/Structure" element={<Structure />} />
+          <Route path="/Settings" element={<Settings />} />
+        </Routes>
       </BrowserRouter>
     </div>
   );
