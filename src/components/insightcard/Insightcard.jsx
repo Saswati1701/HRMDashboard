@@ -39,7 +39,7 @@ const Insightcard = ({text, number, iconColor, increase, image}) => {
                 <p style={{margin:"0", display:"flex", alignItems:"center", fontSize:"13px"}}><span className='icon-background' style={{margin:"0 0.5rem 0 0"}} ><AiOutlineRise color={iconColor}/></span>{increase}</p>
             </div>
             <div className='insightcard-right-container'>
-            <PieChart
+            {/* <PieChart
               series={[
                 
                 {
@@ -52,7 +52,7 @@ const Insightcard = ({text, number, iconColor, increase, image}) => {
               ]}
               height={300}
               legend={{ hidden: true }}
-            />
+            /> */}
             </div>
     </div>
   )

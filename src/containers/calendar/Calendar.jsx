@@ -13,23 +13,7 @@ const data2 = [
 const Calendar = () => {
   
   return (
-    <div style={{ height: "100%", width:"100%"}}>
-       <PieChart
-       sx={{ height: "100%", width:"100%"}}
-      series={[
-
-        {
-          data: data2,
-          cx: 100,
-          cy: 200,
-          innerRadius: 40,
-          outerRadius: 80,
-        },
-      ]}
-      // height="100px"
-      // width="100px"
-      legend={{ hidden: true }}
-    />
+    <div >
     </div>
   )
 }

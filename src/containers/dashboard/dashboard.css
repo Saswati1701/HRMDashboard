@@ -7,8 +7,9 @@
 }
 
 .graph-table{
-    height: 401px;
+    /* height: 401px; */
     margin-top: 1.5rem;
+    padding: 1rem;
     background-color: white;
     border-radius:1rem ;
     display: flex;
@@ -25,5 +26,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2.5rem;
+    /* padding: 1rem 2.5rem; */
+}
+
+.switch{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-container{
+    width: 331.73px;
+    height: 100vh;
+    background-color: pink;
+    float: right;
 }
