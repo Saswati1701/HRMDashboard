@@ -1,0 +1,6 @@
+.content{
+    width: max-content;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+}

@@ -34,7 +34,7 @@
 }
 
 .content{
-    width: 100%;
+    width: max-content;
     padding: 2rem;
     display: flex;
     flex-direction: row;

@@ -2,6 +2,7 @@ import React from 'react'
 import { PieChart } from '@mui/x-charts/PieChart';
 import { useNavigate } from 'react-router-dom'
 import Topbar from '../../components/topbar/Topbar';
+import './calendar.css'
 
 const data2 = [
   { label: 'Group A', value: 2400 },
@@ -14,9 +15,9 @@ const data2 = [
 const Calendar = () => {
   
   return (
-    <>
+    <div className='content'>
       <Topbar />
-    </>
+    </div>
   )
 }
 
