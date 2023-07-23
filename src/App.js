@@ -7,6 +7,7 @@ import Jobs from './containers/jobs/Jobs';
 import Candidates from './containers/candidates/Candidates';
 import Structure from './containers/structure/Structure';
 import Settings from './containers/settings/Settings';
+import Extra from './containers/xtra/Extra'; 
 
 function App() {
   
@@ -22,6 +23,7 @@ function App() {
           <Route path="/Candidates" element={<Candidates />} />
           <Route path="/Structure" element={<Structure />} />
           <Route path="/Settings" element={<Settings />} />
+          <Route path="/xtra" element={<Extra />} />
         </Routes>
       </BrowserRouter>
     </div>
