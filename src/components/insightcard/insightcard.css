@@ -3,19 +3,27 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 267px;
-    height:122px ;
-    border: 1px solid black;
+    width: 27%;
+    /* height:122px ; */
+    background-color: white;
+    padding: 1.5rem 1.5rem;
+    border-radius: 1rem;
 
 }
 
 .insightcard-left-container{
-    width: 50%;
+    width: 60%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .insightcard-right-container{
-    width: 50%;
+    width: 40%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
 }
 
@@ -24,7 +32,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #EAF6F4;
+    /* background-color: #EAF6F4; */
     border-radius:50% ;
     height: 20px;
     width: 20px;

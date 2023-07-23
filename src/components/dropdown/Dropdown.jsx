@@ -15,10 +15,10 @@ const CustomSelect = React.forwardRef(function CustomSelect(props, ref) {
   return <Select {...props} ref={ref} slots={slots} />;
 });
 
-export default function Dropdown() {
+export default function Dropdown({val}) {
   return (
-    <CustomSelect defaultValue={10}>
-      <StyledOption value={10}>Month</StyledOption>
+    <CustomSelect defaultValue={val}>
+      <StyledOption value={val}>{val}</StyledOption>
       <StyledOption value={20}>Twenty</StyledOption>
       <StyledOption value={30}>Thirty</StyledOption>
     </CustomSelect>
@@ -54,7 +54,7 @@ const StyledButton = styled('button')(
   box-sizing: border-box;
   min-width: 100px;
   padding: 8px 12px;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   text-align: left;
   line-height: 1.5;
   background: ${theme.palette.mode === 'dark' ? grey[900] : '#fff'};
@@ -92,10 +92,10 @@ const StyledButton = styled('button')(
 const StyledListbox = styled('ul')(
   ({ theme }) => `
   font-family: IBM Plex Sans, sans-serif;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   box-sizing: border-box;
-  padding: 6px;
-  margin: 12px 0;
+  padding: 5px;
+  margin: 10px 0;
   min-width: 100px;
   border-radius: 12px;
   overflow: auto;

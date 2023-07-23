@@ -1,0 +1,26 @@
+.activityFeed{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.avatar{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #EAF6F4;
+    margin-right: 0.5rem;
+}
+
+.feed-content{
+    margin-right: 1rem;
+}
+
+.tag{
+    color: #538EFE;
+    background-color: #D8E5FF;
+    margin: 1rem 0;
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+    font-size: 13px;
+}
+
