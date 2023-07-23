@@ -1,0 +1,9 @@
+.content{
+    width: max-content;
+    height: 100vh;
+}
+
+.progress{
+    height: 80px;
+    width: 80px;
+}
