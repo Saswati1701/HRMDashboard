@@ -3,6 +3,9 @@ import './jobs.css'
 import Avatars from '../../images/avatars.png'
 import { HiOutlinePlus } from "react-icons/hi";
 import Topbar from '../../components/topbar/Topbar';
+import { Divider } from '@mui/material';
+import { BiSolidCalendar } from "react-icons/bi";
+import { BsQuestionCircleFill } from "react-icons/bs";
 
 
 const jobInfo=[
@@ -91,6 +94,18 @@ const Jobs = () => {
   return (
     <div>
       <Topbar/>
+      <div className='jobs-header'>
+        <div className='jobs-title'>
+          <h1>Jobs</h1>
+          <p className='sort' > <span style={{color:'#8F8F8F'}}>Sort by: </span> <span>Creation date</span> <span style={{display:'flex', justifyContent:'center', alignItems:'center'}}><BiSolidCalendar size={25}/></span></p>
+        </div>
+        <div className='jobs-nav'>
+          <h3>Active Jobs <span className='jobs-nav-count'>07</span></h3>
+          <h3>Completed <span className='jobs-nav-count'>56</span></h3>
+          <h3>Unfinished <span className='jobs-nav-count'>40</span></h3>
+        </div>
+        <Divider/>
+      </div>
       <div className='Jobs'>
           
         {jobInfo.map((val, ind)=>{ return (

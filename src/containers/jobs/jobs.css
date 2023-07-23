@@ -1,3 +1,40 @@
+.jobs-header{
+    margin-left: 1rem;
+}
+.jobs-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sort{
+    margin-right:1.5rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight: 500;
+}
+.sort>*{
+    margin-left: 0.7rem;
+}
+.jobs-nav{
+    display: flex;
+}
+.jobs-nav>*{
+    margin-right: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.jobs-nav>*:hover{
+    cursor: pointer;
+}
+
+.jobs-nav-count{
+    color: #38CB89;
+    background-color: #d6eee9;
+    padding: 0.2rem 0.3rem;
+    border-radius: 0.5rem;
+}
+
 .job-card-component{
     width: 240px;
     background-color: white;
