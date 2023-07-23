@@ -128,9 +128,9 @@ const Jobs = () => {
           <p className='sort' > <span style={{color:'#8F8F8F'}}>Sort by: </span> <span>Creation date</span> <span style={{display:'flex', justifyContent:'center', alignItems:'center'}}><BiSolidCalendar size={25}/></span></p>
         </div>
         <div className='jobs-nav'>
-          <h3 onClick={() => { setStatus("active") } }>Active Jobs <span className='jobs-nav-count'>07</span></h3>
-          <h3 onClick={() => { setStatus("completed") } }>Completed <span className='jobs-nav-count'>56</span></h3>
-          <h3 onClick={() => { setStatus("unfinished") } }>Unfinished <span className='jobs-nav-count'>40</span></h3>
+          <h3 onClick={() => { setStatus("active") } }>Active Jobs <span className='jobs-nav-count'>{jobArray.filter((obj)=>{return obj.status=="active"}).length}</span></h3>
+          <h3 onClick={() => { setStatus("completed") } }>Completed <span className='jobs-nav-count'>{jobArray.filter((obj)=>{return obj.status=="completed"}).length}</span></h3>
+          <h3 onClick={() => { setStatus("unfinished") } }>Unfinished <span className='jobs-nav-count'>{jobArray.filter((obj)=>{return obj.status=="unfinished"}).length}</span></h3>
         </div>
         <Divider/>
       </div>
