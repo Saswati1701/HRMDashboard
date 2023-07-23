@@ -1,4 +1,4 @@
-import React from 'react'
+import React , {useState} from 'react'
 import './jobs.css'
 import Avatars from '../../images/avatars.png'
 import { HiOutlinePlus } from "react-icons/hi";
@@ -6,7 +6,6 @@ import Topbar from '../../components/topbar/Topbar';
 import { Divider } from '@mui/material';
 import { BiSolidCalendar } from "react-icons/bi";
 import { BsQuestionCircleFill } from "react-icons/bs";
-
 
 const jobInfo=[
   {
@@ -16,46 +15,7 @@ const jobInfo=[
     location:"Dhaka, Bangladesh",
     description:"We are looking for a programmer with a keen eye for design for the position of UI/UX designer...",
     count:"122+ Candidates",
-  },
-  {
-    postDate:"6 July",
-    team:"Design",
-    role:"UI/UX Designer",
-    location:"Dhaka, Bangladesh",
-    description:"We are looking for a Technical Content writer who is an expert in App and web based content...",
-    count:"60+ Candidates",
-  },
-  {
-    postDate:"7 July",
-    team:"Design",
-    role:"Head of UX",
-    location:"Dhaka, Bangladesh",
-    description:"We are looking for a programmer with a keen eye for design for the position of UI/UX designer...",
-    count:"122+ Candidates",
-  },
-  {
-    postDate:"8 July",
-    team:"Marketing",
-    role:"Copywriter",
-    location:"Dhaka, Bangladesh",
-    description:"We are looking for a programmer with a keen eye for design for the position of UI/UX designer...",
-    count:"122+ Candidates",
-  },
-  {
-    postDate:"9 July",
-    team:"Design",
-    role:"Junior Designer",
-    location:"Dhaka, Bangladesh",
-    description:"We are looking for a programmer with a keen eye for design for the position of UI/UX designer...",
-    count:"122+ Candidates",
-  },
-  {
-    postDate:"10 July",
-    team:"Developer",
-    role:"Wordpress Development",
-    location:"Dhaka, Bangladesh",
-    description:"We are looking for a programmer with a keen eye for design for the position of UI/UX designer...",
-    count:"122+ Candidates",
+    status: "active"
   },
   {
     postDate:"11 July",
@@ -64,6 +24,70 @@ const jobInfo=[
     location:"Dhaka, Bangladesh",
     description:"We are looking for a programmer with a keen eye for design for the position of UI/UX designer...",
     count:"122+ Candidates",
+    status: "completed"
+  },
+  {
+    postDate:"5 July",
+    team:"Design 3",
+    role:"Senior Product Designer",
+    location:"Dhaka, Bangladesh",
+    description:"We are looking for a programmer with a keen eye for design for the position of UI/UX designer...",
+    count:"122+ Candidates",
+    status: "unfinished"
+  },
+  {
+    postDate:"6 July",
+    team:"Design",
+    role:"UI/UX Designer",
+    location:"Dhaka, Bangladesh",
+    description:"We are looking for a Technical Content writer who is an expert in App and web based content...",
+    count:"60+ Candidates",
+    status: "unfinished"
+  },
+  {
+    postDate:"7 July",
+    team:"Design",
+    role:"Head of UX",
+    location:"Dhaka, Bangladesh",
+    description:"We are looking for a programmer with a keen eye for design for the position of UI/UX designer...",
+    count:"122+ Candidates",
+    status: "unfinished"
+  },
+  {
+    postDate:"8 July",
+    team:"Marketing",
+    role:"Copywriter",
+    location:"Dhaka, Bangladesh",
+    description:"We are looking for a programmer with a keen eye for design for the position of UI/UX designer...",
+    count:"122+ Candidates",
+    status: "unfinished"
+  },
+  {
+    postDate:"9 July",
+    team:"Design",
+    role:"Junior Designer",
+    location:"Dhaka, Bangladesh",
+    description:"We are looking for a programmer with a keen eye for design for the position of UI/UX designer...",
+    count:"122+ Candidates",
+    status: "unfinished"
+  },
+  {
+    postDate:"10 July",
+    team:"Developer",
+    role:"Wordpress Development",
+    location:"Dhaka, Bangladesh",
+    description:"We are looking for a programmer with a keen eye for design for the position of UI/UX designer...",
+    count:"122+ Candidates",
+    status: "unfinished"
+  },
+  {
+    postDate:"11 July",
+    team:"Design",
+    role:"UX Content Writer",
+    location:"Dhaka, Bangladesh",
+    description:"We are looking for a programmer with a keen eye for design for the position of UI/UX designer...",
+    count:"122+ Candidates",
+    status: "unfinished"
   },
   
 ]
@@ -91,24 +115,28 @@ const JobCard=({postDate, team, role, location, description, count})=>{
   )
 }
 const Jobs = () => {
+  const [jobArray, setJobArray] = useState(jobInfo);
+  const [status, setStatus] = useState("active"); // completed, unfinished
+  const [query, setQuery] = useState("");
+
   return (
     <div>
-      <Topbar/>
+      <Topbar callback={setQuery}/>
       <div className='jobs-header'>
         <div className='jobs-title'>
           <h1>Jobs</h1>
           <p className='sort' > <span style={{color:'#8F8F8F'}}>Sort by: </span> <span>Creation date</span> <span style={{display:'flex', justifyContent:'center', alignItems:'center'}}><BiSolidCalendar size={25}/></span></p>
         </div>
         <div className='jobs-nav'>
-          <h3>Active Jobs <span className='jobs-nav-count'>07</span></h3>
-          <h3>Completed <span className='jobs-nav-count'>56</span></h3>
-          <h3>Unfinished <span className='jobs-nav-count'>40</span></h3>
+          <h3 onClick={() => { setStatus("active") } }>Active Jobs <span className='jobs-nav-count'>07</span></h3>
+          <h3 onClick={() => { setStatus("completed") } }>Completed <span className='jobs-nav-count'>56</span></h3>
+          <h3 onClick={() => { setStatus("unfinished") } }>Unfinished <span className='jobs-nav-count'>40</span></h3>
         </div>
         <Divider/>
       </div>
       <div className='Jobs'>
           
-        {jobInfo.map((val, ind)=>{ return (
+        {jobArray.filter((obj) => obj.status === status && obj.role.toLocaleLowerCase().search(query.toLocaleLowerCase()) >= 0 ).map((val)=>{ return (
           <JobCard
           postDate ={ val.postDate }
           team={val.team}  
