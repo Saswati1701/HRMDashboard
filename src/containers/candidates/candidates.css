@@ -1,0 +1,52 @@
+.candidates-container{
+    width:100%
+}
+.candidates-header{
+    margin-left: 1rem;
+}
+.candidates-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sort{
+    margin-right:1.5rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight: 500;
+}
+.sort>*{
+    margin-left: 0.7rem;
+}
+.candidates-nav{
+    display: flex;
+}
+.candidates-nav>*{
+    margin-right: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.candidates-nav>*:hover{
+    cursor: pointer;
+}
+
+.candidates-nav-count{
+    color: #38CB89;
+    background-color: #d6eee9;
+    padding: 0.2rem 0.3rem;
+    border-radius: 0.5rem;
+}
+
+.circle{
+    height: 32px;
+    width: 32px;
+    background-color: blue;
+    border-radius: 50%;
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
