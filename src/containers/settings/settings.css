@@ -35,21 +35,29 @@
     width: 90%;
     height: 27%;
     border: 1px solid red;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     
-    justify-content: center;
-    align-items: center;
+}
 
+.inputfield{
+    width: 100%;
+    padding: 0 5px;
+}
+
+.inputfield > div{
+    width: 100%;
 }
 
 .input-box{
-    display: flex;
-    flex-direction: row;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
+
+
 
 .job-portal{
     width: 90%;

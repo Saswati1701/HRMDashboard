@@ -19,43 +19,51 @@ const Settings = () => {
           </div>
         </div>
         <div className='personal-info'>
-        <Box
-          component="form"
-          sx={{
-            '& .MuiTextField-root': { m: 1, width: '25ch' },
-          }}
-          noValidate
-          autoComplete="off"
-        >
-          <div className='input-box'>
-            <TextField
-              required
-              // id="outlined-required"
-              label="First Name"
-              defaultValue="Saswati Mahanta"
-            />
-            <TextField
-              required
-              // id="outlined-required"
-              label="First Name"
-              defaultValue="Saswati Mahanta"
-            />
-            <TextField
-              required
-              // id="outlined-required"
-              label="First Name"
-              defaultValue="Saswati Mahanta"
-            />
-            <TextField
-              required
-              // id="outlined-required"
-              label="First Name"
-              defaultValue="Saswati Mahanta"
-            />
+          <Box
+            component="form"
+            sx={{
+              '& .MuiTextField-root': { m: 1, width: '90%' },
+            }}
+            noValidate
+            autoComplete="off"
+          >
+            <div className='input-box'>
+              <div className="inputfield">  
+                <TextField
+                  required
+                  // id="outlined-required"
+                  label="First Name"
+                  defaultValue="Saswati Mahanta"
+                />
+              </div>
+              <div className="inputfield">  
+                <TextField
+                  required
+                  // id="outlined-required"
+                  label="First Name"
+                  defaultValue="Saswati Mahanta"
+                />
+              </div>
+              <div className="inputfield">  
+                <TextField
+                  required
+                  // id="outlined-required"
+                  label="First Name"
+                  defaultValue="Saswati Mahanta"
+                />
+              </div>
+              <div className="inputfield">  
+                <TextField
+                  required
+                  // id="outlined-required"
+                  label="First Name"
+                  defaultValue="Saswati Mahanta"
+                />
+              </div>
+              
             
-          
-          </div>
-        </Box>
+            </div>
+          </Box>
         </div>
         <div className='job-portal'></div>
       </div>
