@@ -120,7 +120,7 @@ const Jobs = () => {
   const [query, setQuery] = useState("");
 
   return (
-    <div style={{width:'100%'}}>
+    <div style={{width:'100%', marginLeft:'250px'}}>
       <Topbar callback={setQuery}/>
       <div>
         <div className='jobs-header'>

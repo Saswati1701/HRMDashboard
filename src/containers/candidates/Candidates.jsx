@@ -9,7 +9,7 @@ import EnhancedTable from '../../components/table/Table';
 
 const Candidates = () => {
   return (
-    <div style={{width:'100%'}}>
+    <div style={{width:'100%', marginleft:'250px'}}>
       <Topbar/>
       <div className='candidates-container'>
         <div className='candidates-header'>

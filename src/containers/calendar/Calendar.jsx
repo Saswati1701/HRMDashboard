@@ -15,8 +15,11 @@ const data2 = [
 const Calendar = () => {
   
   return (
-    <div className='content'>
+    <div style={{width:"100%", marginLeft:'250px'}}>
       <Topbar />
+      <div className='calendar-container'>
+        Calendar
+      </div>
     </div>
   )
 }
