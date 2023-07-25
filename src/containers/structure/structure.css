@@ -1,0 +1,62 @@
+.strContainer{
+    width: 99%;
+    height: 650px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 250px;
+    padding: 30px;
+}
+
+.strRow{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.strRow.one{
+    border-bottom: 1px solid gray;
+    
+}
+
+.strCol{
+    height: 100%;
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.strCol.one{
+    border-right: 1px solid gray;
+}
+
+.strCol.three{
+    border-right: 1px solid gray;
+}
+
+.names{
+    width: 80%;
+    height: 60%;
+    margin: auto;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.name{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
