@@ -120,39 +120,41 @@ const Jobs = () => {
   const [query, setQuery] = useState("");
 
   return (
-    <div className='jobs-container'>
+    <div style={{width:'100%'}}>
       <Topbar callback={setQuery}/>
-      <div className='jobs-header'>
-        <div className='jobs-title'>
-          <h1>Jobs</h1>
-          <p className='sort' > <span style={{color:'#8F8F8F'}}>Sort by: </span> <span>Creation date</span> <span style={{display:'flex', justifyContent:'center', alignItems:'center'}}><BiSolidCalendar size={25}/></span></p>
+      <div>
+        <div className='jobs-header'>
+          <div className='jobs-title'>
+            <h1>Jobs</h1>
+            <p className='sort' > <span style={{color:'#8F8F8F'}}>Sort by: </span> <span>Creation date</span> <span style={{display:'flex', justifyContent:'center', alignItems:'center'}}><BiSolidCalendar size={25}/></span></p>
+          </div>
+          <div className='jobs-nav'>
+            <h3 onClick={() => { setStatus("active") } }>Active Jobs <span className='jobs-nav-count'>{jobArray.filter((obj)=>{return obj.status=="active"}).length}</span></h3>
+            <h3 onClick={() => { setStatus("completed") } }>Completed <span className='jobs-nav-count'>{jobArray.filter((obj)=>{return obj.status=="completed"}).length}</span></h3>
+            <h3 onClick={() => { setStatus("unfinished") } }>Unfinished <span className='jobs-nav-count'>{jobArray.filter((obj)=>{return obj.status=="unfinished"}).length}</span></h3>
+          </div>
+          <Divider/>
         </div>
-        <div className='jobs-nav'>
-          <h3 onClick={() => { setStatus("active") } }>Active Jobs <span className='jobs-nav-count'>{jobArray.filter((obj)=>{return obj.status=="active"}).length}</span></h3>
-          <h3 onClick={() => { setStatus("completed") } }>Completed <span className='jobs-nav-count'>{jobArray.filter((obj)=>{return obj.status=="completed"}).length}</span></h3>
-          <h3 onClick={() => { setStatus("unfinished") } }>Unfinished <span className='jobs-nav-count'>{jobArray.filter((obj)=>{return obj.status=="unfinished"}).length}</span></h3>
-        </div>
-        <Divider/>
-      </div>
-      <div className='Jobs'>
+        <div className='Jobs'>
+            
+          {jobArray.filter((obj) => obj.status === status && obj.role.toLocaleLowerCase().search(query.toLocaleLowerCase()) >= 0 ).map((val)=>{ return (
+            <JobCard
+            postDate ={ val.postDate }
+            team={val.team}  
+            role={val.role}
+            location={val.location}
+            description={val.description}
+            count={val.count}
+
+            />)}
+          )}
+          <div className='newJob'>
+            <HiOutlinePlus color='#38CB89' size={30}/>
+            <p style={{color:"#38CB89", fontSize:"1.3rem", margin:'0 '}}>Create New Job</p>
+          </div>
+
           
-        {jobArray.filter((obj) => obj.status === status && obj.role.toLocaleLowerCase().search(query.toLocaleLowerCase()) >= 0 ).map((val)=>{ return (
-          <JobCard
-          postDate ={ val.postDate }
-          team={val.team}  
-          role={val.role}
-          location={val.location}
-          description={val.description}
-          count={val.count}
-
-          />)}
-        )}
-        <div className='newJob'>
-          <HiOutlinePlus color='#38CB89' size={30}/>
-          <p style={{color:"#38CB89", fontSize:"1.3rem", margin:'0 '}}>Create New Job</p>
         </div>
-
-        
       </div>
     </div>
   )

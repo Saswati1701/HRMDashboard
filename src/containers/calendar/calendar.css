@@ -1,5 +1,5 @@
 .content{
-    width: max-content;
+    width: 100%;
     padding: 2rem;
     display: flex;
     flex-direction: row;
