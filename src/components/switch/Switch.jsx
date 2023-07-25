@@ -3,7 +3,10 @@ import './switch.css'
 import Switch, { switchClasses } from '@mui/base/Switch';
 import { alpha, styled } from '@mui/material/styles';
 
-const blue = {
+
+const Switch_component = ({switchText, trackColor}) => {
+  const label = { slotProps: { input: { 'aria-label': 'Demo switch' } } };
+  const blue = {
     500: '#007FFF',
   };
   
@@ -12,6 +15,13 @@ const blue = {
     500: '#6e7781',
     600: '#57606a',
   };
+
+  // const trackColor ={
+  //   400: "#38CB89",
+  //   500: "#FFF8EE",
+  //   600: "#FF5630",
+    
+  // }
   
   const Root = styled('span')(
     ({ theme }) => `
@@ -65,7 +75,7 @@ const blue = {
       }
   
       .${switchClasses.track} {
-        background: ${blue[500]};
+        background: ${trackColor};
       }
     }
   
@@ -82,9 +92,6 @@ const blue = {
     }
     `,
   );
-const Switch_component = ({switchText}) => {
-  const label = { slotProps: { input: { 'aria-label': 'Demo switch' } } };
-
   return (
     <p className='switch'>
         <span>

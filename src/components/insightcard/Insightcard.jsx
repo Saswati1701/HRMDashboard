@@ -31,13 +31,13 @@ const data2 = [
 
 
 
-const Insightcard = ({text, number, iconColor, iconbg, increase, image, color}) => {
+const Insightcard = ({text, number, iconColor, iconbg, increase}) => {
   const percentage = 70;
   return (
     <div className='insightcard-component'>
             <div className='insightcard-left-container'>
                 <p style={{color:"#C4C4C4", margin:'0 0 0.3rem 0', fontSize:"14px"}}>{text}</p>
-                <h2 style={{ color:`${color}` ,margin:'0 0 0.3rem 0'}}>{number}</h2>
+                <h2 style={{margin:'0 0 0.3rem 0'}}>{number}</h2>
                 <p style={{margin:"0", display:"flex", alignItems:"center", fontSize:"13px"}}><span className='icon-background' style={{margin:"0 0.5rem 0 0", backgroundColor:`${iconbg}`}} ><AiOutlineRise color={iconColor}/></span>{increase}</p>
             </div>
             <div className='insightcard-right-container'>
@@ -62,8 +62,8 @@ const Insightcard = ({text, number, iconColor, iconbg, increase, image, color}) 
                   // pathTransition: 'none',
               
                   // Colors
-                  pathColor: `${color}`,
-                  textColor: 'blue',
+                  pathColor: `${iconColor}`,
+                  textColor: 'black',
                   trailColor: '#d6d6d6',
                   backgroundColor: '#3e98c7',
                 })} 

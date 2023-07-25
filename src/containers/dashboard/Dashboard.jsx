@@ -20,6 +20,18 @@ import {
 import { Bar } from 'react-chartjs-2';
 import { faker } from '@faker-js/faker';
 
+
+const RightDashboard_component = ({title, text}) =>{
+  return(
+    <div className='rightDashboard_component'>
+      <div className='rightDashboard_component_circle'></div>
+      <div style={{marginLeft:'1rem'}}>
+        <p style={{fontSize:'15px', marginBottom:'0', fontWeight:'500' }}>{title}</p>
+        <p style={{fontSize:'12px', marginTop:'0.4rem'}}>{text}</p>
+      </div>
+    </div>
+  )
+};
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -87,7 +99,6 @@ const Dashboard = () => {
             number="5672" 
             iconColor="#38CB89" 
             increase="+14% inc"  
-            image={GreenChart} 
             iconbg="#EAF6F4"
           />
           <Insightcard 
@@ -95,7 +106,6 @@ const Dashboard = () => {
             number="3045" 
             iconColor="#FFA600" 
             increase="+14% inc"  
-            image={YellowChart} 
             iconbg="#FFF8EE"
           />
           <Insightcard 
@@ -104,7 +114,6 @@ const Dashboard = () => {
             number="1055" 
             iconColor="#FF5630" 
             increase="+14% inc" 
-            image={OrangeChart} 
             iconbg="#FEF2EF"
           />
         </div>
@@ -113,9 +122,9 @@ const Dashboard = () => {
           <div className='graph-table-header'>
             <p style={{fontSize:"18px", fontWeight:"bold"}}>Statistics of active applications</p>
             <div className='switches'>
-            <Switch_component switchText="Applications"/>
-            <Switch_component switchText="Shortlisted"/>
-            <Switch_component switchText="Rejected"/>  
+            <Switch_component switchText="Applications" trackColor="#56CCF2" />
+            <Switch_component switchText="Shortlisted" trackColor="#FFA600"/>
+            <Switch_component switchText="Rejected" trackColor="#FF5630"/>  
         
             </div>
             <div>
@@ -157,6 +166,28 @@ const Dashboard = () => {
       </div>
       
       <div className='right-dashboard'>
+        <div className='upper-container_right-dashboard'>
+          <div className='user-image'></div>
+          <div className='name_designation'>
+            <h2 style={{marginBottom:'0'}}>Aman Bubu</h2>
+            <p style={{marginTop:'0.5rem'}}>Director of Recruiting</p>
+          </div>
+        </div>
+        <div className='lower-container_right-dashboard'>
+          <div>
+            <p style={{fontSize:'17px', marginBottom:'0', fontWeight:'bold' }}>Meetings</p>
+            <RightDashboard_component title="Cameron Williamson" text="Have you planned any..."/>
+            <RightDashboard_component title="Cameron Williamson" text="Have you planned any..."/>
+
+          </div>
+          <div>
+            <p style={{fontSize:'17px', marginBottom:'0', fontWeight:'bold' }}>Recently Added</p>
+            <RightDashboard_component title="Cameron Williamson" text="Have you planned any..."/>
+            <RightDashboard_component title="Cameron Williamson" text="Have you planned any..."/>
+            <RightDashboard_component title="Cameron Williamson" text="Have you planned any..."/>
+            <RightDashboard_component title="Cameron Williamson" text="Have you planned any..."/>
+          </div>
+        </div>
      
         
       </div>
