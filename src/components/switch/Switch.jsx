@@ -1,6 +1,6 @@
 import React from 'react'
 import './switch.css'
-import Switch, { switchClasses } from '@mui/base/Switch';
+import  { Switch, switchClasses } from '@mui/base/Switch';
 import { alpha, styled } from '@mui/material/styles';
 
 
