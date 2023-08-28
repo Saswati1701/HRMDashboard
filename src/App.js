@@ -8,11 +8,13 @@ import Candidates from './containers/candidates/Candidates';
 import Structure from './containers/structure/Structure';
 import Settings from './containers/settings/Settings';
 import Extra from './containers/xtra/Extra'; 
+import LoginForm from './containers/loginForm/LoginForm';
 
 function App() {
-  
+  let loggedIn = true;
  return (
     <div className="App">
+      {loggedIn ? (
       <BrowserRouter> 
         <Navbar/>
         <Routes>
@@ -25,7 +27,10 @@ function App() {
           <Route path="/Settings" element={<Settings />} />
           <Route path="/xtra" element={<Extra />} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter>   
+      ) : (
+        <LoginForm />
+      )}
     </div>
   );
 }
